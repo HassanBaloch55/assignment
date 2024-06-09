@@ -11,17 +11,14 @@ if ($conn->connect_error) {
 $id = $_POST['Id'];
 
 // Prepare and execute the SQL delete statement
-$sql = "DELETE FROM Student WHERE Id = ?";
-$stmt = $conn->prepare($sql);
-$stmt->bind_param("i", $id);
-
-if ($stmt->execute()) {
+$Delete = "DELETE FROM Student WHERE Id = '$id'";
+$result = mysqli_query($conn, $Delete);
+if($result == true ) {
     echo "Record deleted successfully.";
 } else {
-    echo "Error deleting record: " . $conn->error;
+    echo "Error deleting record ";
 }
+mysqli_close($conn);
 
-$stmt->close();
-$conn->close();
 
 ?>

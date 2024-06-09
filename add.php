@@ -1,7 +1,6 @@
 <?php
 //Create connection
-$conn = mysqli_connect ("localhost","root","","Al_Hassan",);
-
+ include 'connect.php';
 // Get data from form submission
 $id     =   $_POST['Id'];
 $Stu_id     =   $_POST['S_Id'];

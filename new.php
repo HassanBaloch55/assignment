@@ -6,61 +6,47 @@
     <link rel="stylesheet" href="style.css">
     <title>Home Page</title>
 </head>
+<style>
+  .srch{
+      height: auto;
+      width: 30%;
+      padding: 10px 10px;
+   }
+   .srch::placeholder{
+   font-size: 1.5em;
+    color:red;
+    text-align: center;
+   }
+</style>
 <body>
 <nav>
     <?php
 
     include 'navbar.php';
-
-        
-      // this link is connect with database
-      include 'connect.php';
-    
-    $sql = "select * from Student";
-    $result = mysqli_query($conn, $sql) or die("query unsuccess");
-
+    include 'find.php';
+  
     ?>
     <table> 
-               <h2>All Records Of Al Hassan Academy</h2>
-   
+               <h2> Type Student Id  For Records Of Al Hassan Academy</h2>
+                 <h2> 
+                    <form action="new.php" method="post" id="search_form" >
+                       <input type="text" name="S_Id" class="srch" placeholder="Enter Student_Id for Records">
+                     </form>
+                 </h2>
        <thead >
       
-        <th>
-            Seriel No:
-        </th>
-        <th>
-            Student_Id No:
-        </th>
-        <th>
-             First Name
-        </th>
-        <th>
-             Last Name
-        </th>
-        <th>
-             Father Name
-        </th>
-        <th>
-             Father Number
-        </th>
-        <th>
-             D_O_B
-        </th>
-        <th>
-            Class
-        </th>
-        <th>
-           Class
-        </th>
-        <th>
-            Section
-        </th>
-        <th>
-            Email
-        </th>
-        <th>
-            Action
-        </th>
+        <th> Seriel No:</th>
+        <th> Student_Id No:</th>
+        <th>  First Name </th>
+        <th> Last Name </th>
+        <th> Father Name </th>
+        <th>  Father Number </th>
+        <th>  D_O_B </th>
+        <th> Class </th>
+        <th>  Class </th>
+        <th> Section  </th>
+        <th> Email </th>
+        <th>Action</th>
        </thead>
         <?php
             while ($row =mysqli_fetch_assoc($result)){
@@ -77,11 +63,8 @@
             <td><?php echo $row ['Class'] ?></td>
             <td><?php echo $row ['Sec'] ?></td>
             <td><?php echo $row ['Email'] ?></td>
-            <td>
-                <button id="edit">Edit</button> 
-            <a href="delform.php"><button id="delete">Delete</button></a>
-             </td>
-            
+            <td><button id="edit">Edit</button> <a href="delform.php"><button id="delete">Delete</button></a></b></td>
+        
           </tr>
         </tbody>
       <?php

@@ -13,8 +13,10 @@
                 <a href="index.php">Home</a>
             </li>
             <li>
-                <a href="addform.php"> Add</a>
+                <a href="addform.php">Add</a>
             </li>
+            <li>
+                <a href="new.php">Find</a>
         </ul>
      </nav>
 </body>

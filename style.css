@@ -23,6 +23,10 @@ body {
    background-color: rgba(0, 150, 62, 0.76);
    position: relative;
 }
+.sec {
+     height: 50vh;
+     width: 80%;
+}
 .form{
     height: auto;
     width: 60%;
@@ -38,6 +42,7 @@ body {
     text-align: center;
     font-size: 2em;
     font-style: oblique;
+    color: aliceblue;
 }
 input {
     height: auto;
@@ -88,10 +93,10 @@ input {
 
 table{
     padding: 7px;
-    left: 2vw;
     position: relative;
     border: 2px solid rgb(39, 32, 26);
     background-color: chocolate;
+    margin: 1vh 2vw;
   
  }
  th{
@@ -114,12 +119,12 @@ table{
 }
 
 #edit {
-    padding: 20px 20px ;
+    padding: 5px 5px ;
     background-color: rgb(4, 70, 145);
     color: white;
 }
 #delete {
-    padding: 20px 20px ;
+    padding: 5px 5px ;
     background-color: rgb(49, 0, 0);
     color: white;
 }
