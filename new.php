@@ -27,7 +27,17 @@
   
     ?>
     <table> 
-               <h2> Type Student Id  For Records Of Al Hassan Academy</h2>
+               <h2> <?php 
+               if (mysqli_num_rows($result) > 0) {
+                echo "Your Search Result Is Here" ;
+            } 
+           else  if (mysqli_num_rows($result) == false) {
+                    echo "Please Type Valid Id Number";
+           }
+
+            else {
+              echo "Please Type Student Id ";
+            } ?> </h2>
                  <h2> 
                     <form action="new.php" method="post" id="search_form" >
                        <input type="text" name="S_Id" class="srch" placeholder="Enter Student_Id for Records">

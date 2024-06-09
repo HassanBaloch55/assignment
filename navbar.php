@@ -15,8 +15,13 @@
             <li>
                 <a href="addform.php">Add</a>
             </li>
-            <li>
+             <li>
                 <a href="new.php">Find</a>
+             </li>
+             <li>
+                <a href="delall.php#">Delete All</a>
+             </li>
+               
         </ul>
      </nav>
 </body>
